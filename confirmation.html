@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Time - Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .confirmation-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #f8f8d4;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .confirmation-section .logo img {
+            width: 250px; /* Adjust the width as needed */
+            height: auto;
+            margin-bottom: 20px; /* Space between logo and text */
+        }
+        .confirmation-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .confirmation-section p {
+            font-size: 24px;
+            max-width: 600px;
+        }
+    </style>
+    <script>
+        // Check if the page is being refreshed
+        if (performance.navigation.type === 1) {
+            window.location.href = "index.html"; // Redirect to home page
+        }
+    </script>
+</head>
+<body>
+    <div class="confirmation-section">
+        <div class="logo">
+            <img src="partytimelogonobg.png" alt="Party Time Logo">
+        </div>
+        <h1>Thank you for choosing Party Time</h1>
+        <p>A confirmation receipt should be sent to your email shortly, Thank You!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Time - About Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="applyAboutStyles()">
+    <div class="header">
+        <div class="company-name">Party Time</div>
+        <div class="logo">
+            <img src="partytimelogonobg.png" alt="Party Time Logo">
+        </div>
+        <div class="navbar">
+            <a href="index.html" onclick="smoothScrollToHome(event)">Home</a>
+            <a href="about.html" onclick="smoothScrollToSection(event, 'about')">About</a>
+            <a href="services.html" onclick="smoothScrollToSection(event, 'services')">Services</a>
+            <a href="packages.html" onclick="smoothScrollToSection(event, 'packages')">Packages</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    
+    <div class="about-section" id="about">
+        <h1>All About Us</h1>
+        <div class="about-content">
+            <div class="about-images">
+                <img src="balloonpartytime.avif" alt="About Image">
+                <img src="partytimeneon.jpg" alt="Neon Party">
+            </div>
+            <div class="about-text">
+                <h2>Creating Lasting Memories</h2>
+                <p>At Party Time, we are a full-service Event Planning Company dedicated to curating unforgettable experiences for a diverse range of clients across various industries. Our team combines expertise with creativity to transform venues and provide guests with truly exceptional moments. Contact us today to begin planning your perfect event.</p>
+                <button class="services-button" onclick="scrollToServices()">Services</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="services-section" id="services">
+        <h1>Our Services</h1>
+        <div class="services-content">
+            <h2>Themed Events</h2>
+            <p>We create unique themed events tailored to your vision, ensuring a memorable experience for all your guests.</p>
+
+            <h2>Marquee Parties</h2>
+            <p>Our marquee parties provide a spectacular setting for your special occasion, complete with elegant decor and top-notch facilities.</p>
+
+            <h2>Special Celebrations</h2>
+            <p>Celebrate life's milestones with our special celebration packages, designed to make your events truly unforgettable.</p>
+
+            <h2>Entertainment</h2>
+            <p>We offer a wide range of entertainment options, from live music to DJs, ensuring your party is lively and engaging.</p>
+
+            <h2>Other Services</h2>
+            <ul class="services-list">
+                <li>Fundraisers</li>
+                <li>Bespoke Catering</li>
+                <li>Themes and Props</li>
+                <li>Invitations and Printworks</li>
+                <li>Sound and Lighting</li>
+            </ul>
+        </div>
+        <button class="packages-button" onclick="scrollToPackages()">Packages</button>
+    </div>
+
+    <script>
+        function applyAboutStyles() {
+            document.querySelector('.header').classList.add('shrink', 'no-gradient', 'black-text');
+        }
+
+        function smoothScrollToHome(event) {
+            event.preventDefault();
+            window.location.href = "index.html";
+        }
+
+        function smoothScrollToSection(event, sectionId) {
+            event.preventDefault();
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            document.querySelector('.header').classList.add('no-gradient', 'black-text', 'shrink');
+        }
+
+        function scrollToPackages() {
+            document.getElementById('packages').scrollIntoView({ behavior: 'smooth' });
+            document.querySelector('.header').classList.add('shrink', 'no-gradient', 'black-text');
+        }
+    </script>
+</body>
+</html>
